@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch
 
 class ClippedReLU(nn.Module):
-    def __init__(self, clip_value=127):
+    def __init__(self, clip_value=1.0):
         super().__init__()
         self.clip_value = clip_value
         
