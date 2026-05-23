@@ -1,2 +1,5 @@
 /src/sf18_nnue.egg-info
 /build
+**/__pycache__
+/.vscode
+.vscode/settings.json

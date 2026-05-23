@@ -5,6 +5,7 @@ from sf18_nnue.utils import ClippedReLU, SqrClippedReLU
 
 class SinglePerspectiveSubnet(nn.Module):
     def __init__(self):
+        super().__init__()
         self.input_embeddings = nn.EmbeddingBag(82673, 1024, padding_idx=0)
         self.input_bias = nn.Parameter(torch.zeros(1024))
         
@@ -50,7 +51,7 @@ class MainSubnet(nn.Module):
         
         return out
 
-class Model(nn.Module):
+class NNUE(nn.Module):
     def __init__(self):
         super().__init__()
         self.single_perspective_subnet = SinglePerspectiveSubnet()
